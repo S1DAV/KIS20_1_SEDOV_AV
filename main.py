@@ -1,11 +1,13 @@
-a = input()
+n = int(input())
 
 suma = 0
 mult = 1
 
-for digit in a:
-    suma += int(digit)
-    mult *= int(digit)
+while n > 0:
+    digit = n % 10
+    suma = suma + digit
+    mult = mult * digit
+    n = n // 10
 
 print("Сумма:", suma)
 print("Произведение:", mult)
